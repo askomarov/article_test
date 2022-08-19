@@ -1,0 +1,36 @@
+.author-block {
+  display: grid;
+  column-gap: 16px;
+  align-items: start;
+  justify-content: start;
+  grid-template-columns: 64px auto;
+  text-align: left;
+
+  @media (min-width: $width-tablet) {
+    grid-template-columns: 64px 200px;
+  }
+}
+
+.author-block__img {
+  display: block;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.author-block__name {
+  font-weight: 700;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 2px;
+    margin-bottom: -2px;
+  }
+}
+
+.author-block__profession {
+  color: $text-secondary;
+  padding-right: 5px;
+}

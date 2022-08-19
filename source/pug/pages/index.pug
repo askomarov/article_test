@@ -1,0 +1,89 @@
+extends ../base/layout
+
+block variables
+  - const title = "article test"
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentPage = 0
+
+
+block main
+  main.main
+    .container
+      section.some-site
+        h1.visually-hidden  Some main title
+        article.some-site__some-article.some-article
+          header.some-article__header
+            mark.some-article__article-mark Новый кейс
+            h2.some-article__title-h2 Облачный колл-центр «Атлант»
+            +img('article','artcile-img', 'png',80,80, 'some alt text').some-article__img
+            .some-article__artcile-info.artcile-info
+              p.artcile-info__category Продукты Тинькофф Бизнес
+              ul.artcile-info__tagslist
+                li.artcile-info__tagslist-item торговый эквайринг
+                li.artcile-info__tagslist-item зарплатный проект
+                li.artcile-info__tagslist-item.tablet-hidden.desktop-block облачный колл-центр
+          .some-article__text-block
+            h3.some-article__title-h3 Бизнес
+            p.some-article__parag ЖилфондСервис помогает с автоматизацией в сфере ЖКХ. Он работает с крупными управляющими компаниями, небольшими ТСЖ и ресурсноснабжающих организаций — РСО.
+
+          .some-article__text-block
+            h3.some-article__title-h3 Задачи
+            p.some-article__parag Одна из потребностей клиентов ЖилфондСервиса — сделать так, чтобы как можно больше жителей платили без задержек. От этого зависит финансовой поток и устойчивость компаний.
+            p.some-article__parag Чтобы привлечь больше клиентов, компания разрабатывает сервисы, которые помогают увеличить собираемость платежей за коммунальные&nbsp;услуги.
+            p.some-article__parag Пример сервиса — «Квартплата.онлайн». Гипотеза такая: если жителям будет проще разбираться с платежами, то и задержек с оплатой станет меньше. Этот сервис и решает эту задачу.
+            p.some-article__parag C помощью «Квартплата.онлайн» жителям проще рассчитывать платежи и оплачивать. Например, они могут с телефона сдать показания счетчиков и оплатить одной кнопкой за все: воду, электричество, благоустройство территории и так далее.
+            p.some-article__parag Чтобы сервис заработал, нужен был партнер для приема платежей онлайн. Кроме самого факта оплаты, партнер должен был решить такие&nbsp;задачи:
+
+            p.some-article__parag &#128073;
+              strong  За один перевод оплатить сразу всем операторам коммунальных услуг.
+              |  Жители один раз оплачивают деньги, а они уходят за нужные услуги в разные организации.
+            p.some-article__parag &#128073;
+              strong  Без ограничений по формату оплаты.
+              |  Жители могут платить с любого устройства, любой картой или сервисом.
+
+            p.some-article__parag &#128073;
+              strong  Без ручной обработки платежей от ЖилфондСервиса.
+              |  Жители переводят одну сумму, а деньги в нужной пропорции переводятся поставщикам света, газа, воды и другим операторам коммунальных услуг.
+            p.some-article__parag.some-article__parag--hidden.desktop-block Обычный интернет-эквайринг, как у магазинов, не подходит. Поэтому компания искала партнера, который смог бы решить эти задачи.
+
+          .some-article__text-block.some-article__text-block--mt
+            h3.some-article__title-h3 Решение
+              +icon('icon-arrow-right', 22, 10)
+              a(href="").some-artilce__text-link.tinkoff-text-link Тинькофф Касса
+
+            p.some-article__parag &#9989;
+              strong  Платеж за несколько секунд.
+              |  Собственник оплачивает всю коммуналку одной кнопкой, даже если у него квартир.
+            p.some-article__parag &#9989;
+              strong  Оплата в любом формате — с
+              |  сайта, приложения, картой, Google Pay или Apple Pay.
+            p.some-article__parag &#9989;
+              strong  Сплитование или другими словами — расщепление платежей работает автоматически.
+              |  ЖилфондСервису не нужно тратить время и рисковать ошибками&nbsp;в&nbsp;расчеете.
+
+          .some-article__text-block
+            h3.some-article__title-h3 Результат
+
+            p.some-article__parag «Квартплата онлайн» — сервис, который помогает компаниям в сфере ЖКХ повысить собираемость платежей. Для этого он умеет напоминать&nbsp;об оплате, принимать данные счетчиков, платить сразу за несколько помещений и многое другое.
+
+          .some-article__text-block
+            blockquote.some-article__blockquoute-title
+              h3.some-article__title-h3  «Выйти на новый сегмент
+                span.tablet-hidden  клиентов
+                |  и удвоить прибыль»
+
+            p.some-article__parag Раньше мы привлекали клиентов только через агентскую сеть — работали с партнерами и получали заинтересованных клиентов от них. Я не верил в эффективность собственных каналов продаж: интернет-рекламу или колл-центр. Казалось, что консалтинг для b2b сложно продать компаниям, которые раньше про&nbsp;нас ничего не слышали.
+
+          footer.some-article__footer
+            .some-article__author-block.author-block
+              +img('article','author-avatar', 'png', 64, 64, 'some alt text').author-block__img
+              h4.author-block__name Ирина Иванова
+              p.author-block__profession Собственник компании и&nbsp;руководитель
+            p.some-article__editor Редактор: Анастасия Волошенко
+            a(href="").some-artilce__text-link Читать всю историю
+        aside.some-article__aside
+          p я асайд
